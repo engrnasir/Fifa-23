@@ -7,15 +7,15 @@
                   <path d="M2 19C99.958 1.65814 200.005 1.66312 299.204 1.66312" stroke="#17E88F" stroke-width="3" stroke-linecap="round"/>
                   </svg>
               </div>
-              <input type="text" class="name" placeholder="Name">
-              <input type="text" class="fifa-nick-name" placeholder="Fifa Nick Name">
-              <input type="text" class="mail" placeholder="Mail">
+              <input type="text" class="name" placeholder="Name" v-model="name">
+              <input type="text" class="fifa-nick-name" placeholder="Fifa Nick Name" v-model="nickname">
+              <input type="text" class="mail" placeholder="Mail" v-model="mail">
               <label for="communication">
-                  <input type="checkbox" name="" id="communication">
+                  <input type="checkbox" name="" id="communication" v-model="acceptCommunication">
                   <p>Acepto recibir comunicaciones de la empresa organizadora del torneo.</p> 
               </label>
               <label for="cookies">
-                  <input type="checkbox" name="" id="cookies"><p>Al registrarme, acepto las condiciones de uso y reconozco haber leído la política de privacidad y cookies.</p>
+                  <input type="checkbox" name="" id="cookies" v-model="acceptCookies"><p>Al registrarme, acepto las condiciones de uso y reconozco haber leído la política de privacidad y cookies.</p>
               </label>
               <button class="submit">
                 <div class="circle">
@@ -32,6 +32,17 @@
 
 <script>
 export default {
+    data(){
+        return{
+            name:'',
+            nickname:'',
+            mail:'',
+            acceptCommunication:false,
+            acceptCookies:false
+
+
+        }
+    }
 
 }
 </script>
