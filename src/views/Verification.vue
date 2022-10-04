@@ -65,6 +65,9 @@ export default {
             line-height: 29px;
             color: #012A2D;
             margin-bottom: 40px;
+            @media only screen and (max-width:740px){
+                width: 270px;
+            }
             &:active{
                 transform: scale(0.95);
             }
