@@ -27,11 +27,13 @@ export default {
 
 <style lang="scss" scoped>
   .container-wrapper{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     .como-llegar{
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -52,14 +54,15 @@ export default {
         }
       }
       .empty-container{
-        
-        
         width: 1200px;
         height: 332px;
         background: #D9D9D9;
         margin-bottom: 50px;
         position: relative;
         z-index: 2;
+        @media only screen and (max-width:1260px){
+          width: 100%;
+        }
       }
     }
     .bg-zigzag{
@@ -78,6 +81,9 @@ export default {
       z-index: 2;
       &>*:not(:last-child){
         margin-right: 80px;
+        @media only screen and (max-width:780px){
+          margin-right: 40px;
+        }
       }
       .text{
         font-family: 'Lato';
@@ -85,6 +91,9 @@ export default {
         font-weight: 700;
         font-size: 32px;
         color: #FFFFFF;
+        @media only screen and (max-width:780px){
+          font-size: 24px;
+        }
       }
     }
   }

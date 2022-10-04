@@ -50,20 +50,45 @@ export default {
         width: 100%;
         background: #17E88F;
         padding: 65px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @media only screen and (max-width:580px){
+            padding: 40px 10px;
+        }
         .hexagon1{
             position: absolute;
             top: 0;
             right: 0;
+            @media only screen and (max-width:580px){
+                width: 100px;
+            }
+            @media only screen and (max-width:580px){
+                width: 60px;
+            }
         }
         .hexagon2{
             position: absolute;
             bottom: 0;
             left: 0;
+            @media only screen and (max-width:780px){
+                width: 200px;
+            }
+            @media only screen and (max-width:780px){
+                width: 150px;
+            }
         }
         .title{
             margin-bottom: 65px;
-            margin-left: 50%;
-            transform: translateX(-50%);
+            @media only screen and (max-width:780px){
+                width: 200px;
+                margin-bottom: 35px;
+            }
+            @media only screen and (max-width:580px){
+                width: 150px;
+                margin-bottom: 20px;
+            }
         }
         .content{
             display: flex;
@@ -81,8 +106,26 @@ export default {
                     align-items: center;
                     justify-content: center;                    
                     margin-bottom: 30px;
+                    @media only screen and (max-width:580px){
+                        margin-bottom: 10px;
+                    }
                     svg{
                         margin-right: 20px;
+                        min-width:70px;
+                        min-height:70px;
+                        @media only screen and (max-width:780px){                            
+                            min-width:35px;
+                            min-height:35px;
+                            width:35px;
+                            height:35px;
+                        }
+                        @media only screen and (max-width:580px){
+                            margin-right: 10px;
+                            min-width:25px;
+                            min-height:25px;
+                            width:25px;
+                            height:25px;
+                        }
                     }
                     .heading{
                         font-weight: 700;
@@ -91,6 +134,14 @@ export default {
                         text-align: center;
                         color: #012A2D;
                         text-transform: capitalize;
+                        @media only screen and (max-width:780px){
+                            font-size: 30px;
+                            line-height: 38px;
+                        }
+                        @media only screen and (max-width:580px){
+                            font-size: 20px;
+                            line-height: 22px;
+                        }
                     }
                 }
                 .text{
@@ -99,6 +150,15 @@ export default {
                     line-height: 38px;
                     text-align: center;
                     color: #012A2D;
+                    @media only screen and (max-width:780px){
+                        width: max-content;
+                        font-size: 24px;
+                        line-height: 28px
+                    }
+                    @media only screen and (max-width:580px){
+                        font-size: 14px;
+                        line-height: 18px
+                    }
                 }
             }
             .v-line{
@@ -106,12 +166,27 @@ export default {
                 height: 200px;
                 background: #012A2D;
                 border-radius: 10px;
+                @media only screen and (max-width:780px) {
+                    width: 2px;
+                }
             }
             .left{
                 padding-right: 130px;
+                @media only screen and (max-width:780px) {
+                    padding-right: 50px;
+                }
+                @media only screen and (max-width:580px) {
+                    padding-right: 15px;
+                }
             }
             .right{
                 padding-left: 130px;
+                @media only screen and (max-width:780px) {
+                    padding-left: 50px;
+                }
+                @media only screen and (max-width:580px) {
+                    padding-left: 15px;
+                }
             }
         }
     }

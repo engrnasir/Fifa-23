@@ -90,13 +90,30 @@ export default {
         justify-content: center;
         flex-direction: column;
         padding: 90px 20px;
+        @media only screen and (max-width:780px){
+            padding: 50px 10px;
+        }
         .heading-wrapper{   
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             .heading{
-                margin-left: 50%;
-                transform: translateX(-50%);
+                // margin-left: 50%;
+                // transform: translateX(-50%);
                 margin-bottom: 30px;
+                @media only screen and (max-width:780px){
+                    width: 230px;
+                    margin-bottom: 20px;
+                }
+                @media only screen and (max-width:580px){
+                    width: 180px;
+                }
             }
             .snippet{
+                width: 100%;
                 max-width: 830px;
                 font-style: normal;
                 font-weight: 400;
@@ -105,6 +122,14 @@ export default {
                 text-align: center;
                 color: #000000;
                 margin-bottom: 30px;
+                @media only screen and (max-width:780px){
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                @media only screen and (max-width:580px){
+                    font-size: 15px;
+                    line-height: 18px;
+                }
             }
             
         }
@@ -112,8 +137,19 @@ export default {
             display: flex;
             align-items: flex-start;
             justify-content: center;
+            position: relative;
+            z-index: 2;
+            @media only screen and (max-width:780px){
+                // flex-direction: columns;
+            }
             &>*:not(:last-child){
                 margin-right: 150px;
+                @media only screen and (max-width:1040px){
+                    margin-right: 30px;
+                }
+                @media only screen and (max-width:580px){
+                    margin-right: 10px;
+                }
             }
             .wrapper{
                 display: flex;
@@ -124,6 +160,17 @@ export default {
                     width: 370px;
                     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
                     margin-bottom: 30px;
+                    @media only screen and (max-width:1040px){
+                        width: 280px;
+                    }
+                    @media only screen and (max-width:780px){
+                        margin-bottom: 10px;
+                        width: 200px;
+                    }
+                    @media only screen and (max-width:580px){
+                        width: 130px;
+                        margin-bottom: 10px;
+                    }
                 }
                 .title{
                     font-style: normal;
@@ -134,11 +181,44 @@ export default {
                     color: #000000;
                     text-transform: capitalize; 
                     margin-bottom: 30px;
+                    @media only screen and (max-width:780px){
+                        margin-bottom: 15px;
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                    @media only screen and (max-width:580px){
+                        margin-bottom: 10px;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
 
                 }
                 .social-icons{
                     .icon{
                         margin: 10px;
+                        @media only screen and (max-width:580px){
+                            margin: 5px;
+                        }
+                        svg{
+                            @media only screen and (max-width:1040px){
+                                min-width: 30px;
+                                min-height: 30px;
+                                width: 30px;
+                                height: 30px;
+                            }
+                            @media only screen and (max-width:780px){
+                                min-width: 20px;
+                                min-height: 20px;
+                                width: 20px;
+                                height: 20px;
+                            }
+                            @media only screen and (max-width:580px){
+                                min-width: 15px;
+                                min-height: 15px;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
                     }
                 }
             }
@@ -147,11 +227,22 @@ export default {
             position: absolute;
             left: 0;
             top: 170px;
+            opacity: .3;
+            @media only screen and (max-width:780px){
+                width: 50px;
+            }
+            @media only screen and (max-width:580px){
+                top: 30px;
+                width: 30px;
+            }
         }
         .bg-hexa{
             position: absolute;
             right: 0;
             bottom: 0;
+            @media only screen and (max-width:780px){
+                width: 150px;
+            }
         }
     }
 

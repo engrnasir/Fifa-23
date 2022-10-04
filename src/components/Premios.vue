@@ -34,8 +34,19 @@ export default {
         flex-direction: column;
         padding: 90px 20px;
         background: #012A2D;
+        @media only screen and (max-width:780px) {
+            padding: 50px 10px;
+        }
         .heading{
             margin-bottom: 80px;
+            @media only screen and (max-width:980px) {
+                margin-bottom: 40px;
+                width: 280px;
+            }
+            @media only screen and (max-width:780px) {
+                margin-bottom: 30px;
+                width: 200px;
+            }
         }
         .content{
             display: flex;
@@ -43,13 +54,29 @@ export default {
             justify-content: center;
             &>*:not(:last-child){
                 margin-right: 150px;
+                @media only screen and (max-width:1140px) {
+                    margin-right: 50px;
+                }
+                @media only screen and (max-width:580px) {
+                    margin-right: 20px;
+                }
             }
             .wrapper{
                 .thumbnail{
                     width: 250px;
-                    height: 280xp;
                     margin-bottom: 28px;
                     clip-path: polygon(50% 0%, 100% 20%, 100% 75%, 50% 100%, 0 75%, 0 20%);
+                    @media only screen and (max-width:980px) {
+                        width: 180px;
+                    }
+                    @media only screen and (max-width:780px) {
+                        margin-bottom: 18px;
+                        width: 120px;
+                    }
+                    @media only screen and (max-width:780px) {
+                        margin-bottom: 15px;
+                        width: 80px;
+                    }
                 }
                 .title{
                     font-family: 'Lato';
@@ -60,6 +87,13 @@ export default {
                     text-align: center;
                     color: #FFFFFF;
                     text-transform: capitalize;
+                    @media only screen and (max-width:980px) {
+                        font-size: 20px;
+                    }
+                    @media only screen and (max-width:780px) {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
 
                 }
             }

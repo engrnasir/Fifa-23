@@ -2,7 +2,7 @@
   <div class="home">
     <HeaderComp/>
     <Formatos/>
-    <Embajadoras/>
+     <Embajadoras/>
     <Premios/>
     <FormComp/>
     <FooterComp/>

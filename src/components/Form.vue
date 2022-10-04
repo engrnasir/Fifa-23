@@ -17,7 +17,7 @@
               <label for="cookies">
                   <input type="checkbox" name="" id="cookies" v-model="acceptCookies"><p>Al registrarme, acepto las condiciones de uso y reconozco haber leído la política de privacidad y cookies.</p>
               </label>
-              <button class="submit">
+              <button class="submit" @click="$router.push('/verification')">
                 <div class="circle">
                     <svg width="29" height="32" viewBox="0 0 29 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24.666 16L3.62522 4.02441V27.9756L24.666 16ZM27.5372 13.5245C27.9816 13.7742 28.351 14.1346 28.6078 14.5693C28.8647 15.004 29 15.4975 29 16C29 16.5025 28.8647 16.996 28.6078 17.4307C28.351 17.8654 27.9816 18.2258 27.5372 18.4755L4.46989 31.607C2.58478 32.6812 0 31.4541 0 29.1315V2.86847C0 0.545907 2.58478 -0.681173 4.46989 0.392966L27.5372 13.5245Z" fill="black"/>
@@ -55,10 +55,16 @@ export default {
         justify-content: center;
         padding: 100px 20px;
         position: relative;
+        @media only screen and (max-width:680px){
+            padding: 70px 0;
+        }
         .bg-hexa{
             position: absolute;
             top: 0;
             left: 0;
+            @media only screen and (max-width:680px){
+                width: 250px;
+            }
         }
         form{
             display: flex;
@@ -72,6 +78,10 @@ export default {
             border-radius: 0px;
             position: relative;
             z-index: 2;
+            @media only screen and (max-width:680px){
+                width: 100%;
+                padding: 40px 20px;
+            }
             .heading-wrapper{
                 .title{
                     font-family: 'Lato';
@@ -81,6 +91,8 @@ export default {
                     line-height: 43px;
                     text-align: center;
                     color: #012A2D;
+                    @media only screen and (max-width:680px){
+                    }
                 }
                 .h-line{
                     width: 160px;
@@ -107,6 +119,10 @@ export default {
                 &:focus{
                     outline-color: #17E88F;
                 }
+                @media only screen and (max-width:580px){
+                    width: 320px;
+                    font-size: 14px;
+                }
             }
             label{
                 font-family: 'Lato';
@@ -121,6 +137,9 @@ export default {
                 width: 432px;
                 margin-left: 20px;    
                 cursor: pointer;
+                @media only screen and (max-width:580px){
+                    width: 100%;
+                }
             }
             input[type='checkbox']{
                 min-width: 28px !important;
@@ -128,6 +147,10 @@ export default {
                 margin-right: 20px;
                 background: rgba(0, 0, 0, 0.05);
                 border: none;
+                @media only screen and (max-width:580px){
+                    min-width: 20px !important;
+                    min-height: 20px !important;
+                }
             }
             .submit{
                 width: 293px;
@@ -141,6 +164,11 @@ export default {
                 align-items: center;
                 cursor: pointer;
                 transition: all .2s;
+                @media only screen and (max-width:580px){
+                    width: 200px;
+                    height: 40px;
+                    font-size: 20px;
+                }
                 &:active{
                     transform: scale(0.95);
                 }
@@ -153,6 +181,18 @@ export default {
                     border-radius: 50%;
                     background: #17E88F;
                     transform: translateX(-30px);
+                    @media only screen and (max-width:580px){
+                        min-width: 50px;
+                        min-height: 50px;
+                    }
+                    svg{
+                        @media only screen and (max-width:580px){
+                            min-width: 20px;
+                            min-height: 20px;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
                 }
                 p{
                     width: 100%;

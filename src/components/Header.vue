@@ -30,6 +30,9 @@ export default {
         .logo{
             width: 257px;
             margin-bottom: 5px;
+            @media only screen and (max-width:580px){
+                width: 180px;
+            }
         }
         .slogen{
             font-weight: 700;
