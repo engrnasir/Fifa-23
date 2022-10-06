@@ -150,8 +150,8 @@ export default {
                     line-height: 38px;
                     text-align: center;
                     color: #012A2D;
+                    width: fit-content;
                     @media only screen and (max-width:780px){
-                        width: fit-content;
                         font-size: 24px;
                         line-height: 28px
                     }
