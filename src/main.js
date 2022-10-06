@@ -9,6 +9,6 @@ createApp(App)
     load: {
         key: 'AIzaSyDFaeiGBcISEYBMIv-B9ILLTiPw3fY6MLw',
     },
-    autobindAllEvents: true,
+    autobindAllEvents: false,
 })
 .use(store).use(router).mount('#app')
