@@ -31,7 +31,7 @@
                 </svg>
                 <h2 class="heading">RanKing presencial</h2>
             </div>
-            <p class="text">Quick matches<br>Quick match weekend<br>Rey de la pista<br>Creator Challenge</p></div>
+            <p class="text">Quick matches<br>Quick match weekend asdfasdfasdfasdfasdf asfwerqwerqwr qwerqwer<br>Rey de la pista<br>Creator Challenge</p></div>
     </div>
     <img src="@/assets/hex.svg" alt="" class="hexagon1">
     <img src="@/assets/hexagon1.svg" alt="" class="hexagon2">
