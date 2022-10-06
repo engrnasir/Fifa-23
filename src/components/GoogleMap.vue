@@ -1,10 +1,20 @@
 <template>
     <GMapMap
-        :center="{lat: 51.093048, lng: 6.842120}"
-        :zoom="4"
+        :center="center"
+        :zoom="4"     
         map-type-id="terrain"
         style="width: 100%; height: 332px"
     >
+    <GMapCluster>
+      <GMapMarker
+          :key="index"
+          v-for="(m, index) in markers"
+          :position="m.position"
+          :clickable="true"
+          :draggable="true"
+          @click="center=m.position"
+      />
+    </GMapCluster>
     </GMapMap>
   </template>
   
@@ -13,7 +23,14 @@
     name: 'App',
     data() {
       return {
-        center: {lat: 51.093048, lng: 6.842120},
+        center: {lat: 38.99093136536435, lng: -1.8468565086554327},
+        markers: [
+        {
+          position: {
+            lat: 38.99093136536435, lng: -1.8468565086554327
+          },
+        }
+    ]
       }
     }
   }
